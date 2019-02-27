@@ -7,4 +7,4 @@ Base :
 - Core values
 - Tumblr and Images on /ressource folder
 - S8 Gallery
-- UI -> VSCO + Dribbble
+- UI -> VSCO + [Dribbble](https://dribbble.com/shots/4581855-Quote-Generator-App)
