@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>Gnothi Seauton</title>
+		<meta charset="utf-8" />
+		<style type="text/css">
+			html, body { width:100%; height:100% }
+			body { margin:0; padding: 0; }
+			#container { width: 100%; height:100%; display:flex; justify-content: center; align-items: center; }
+			#quote{width: 600px; text-align: center;}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<p id="quote">Lorem ipsum dolor Sit Amet Consecutum - Latin Parolus</p>
+		</div>
+		
+		<script type="text/javascript">
+			var list = [
+				//:: Ipseité
+				"Don’t let anyone tell you to change who you are. - Mark Zuckerberg",
+				"I’m here to build something for the long-term. Anything else is a distraction. - Mark Zuckerberg",
+				"Quality not quantity Whatever you build, build with care. Anyone who has built something big, has done it with care. - Mark Zuckerberg",
+				"A guy who makes a nice chair doesn’t owe money to everyone who has ever built a chair - Mark Zuckerberg.",
+				// Vision
+				"Grow In terms of doing work and in terms of learning and evolving as a person, you just grow more when you get more people’s perspectives, I really try and live the mission of the company and keep everything else in my life extremely simple. - Mark Zuckerberg",
+				"My goal was never to just create a company. It was to build something that actually makes a really big change in the world. - Mark Zuckerberg",
+				"Helping a billion people connect is amazing, humbling and by far the thing I am most proud of in my life. - Mark Zuckerberg",
+				"Quoiqu’il arrive il ne faut pas reculer ou encore moins douter de soi, même si la vie peut être cruelle. On entend cette personnification par cette interprétation par la personnification de la vie, qui nous braquerait et qui serait donc sans pitié si le doute venait à se montrer en nous. (PNL)"
+			];
+
+			var pointerPosition = 0;
+			var quoteElement = document.querySelector('#quote');
+			var container = document.querySelector('#container');
+			document.querySelector('body').addEventListener("keydown", function(e) {
+				if(e.code == "ArrowLeft") {
+					
+					if(pointerPosition == 0) {
+						pointerPosition = list.length - 1;
+					}else {
+						pointerPosition--;
+					}
+					
+				}else if(e.code == "ArrowRight") {
+					if(pointerPosition == list.length - 1) {
+						pointerPosition = 0;
+					}else {
+						pointerPosition++;
+					}
+				}
+
+				quoteElement.innerHTML = list[pointerPosition];
+			});
+			
+			
+
+		</script>
+	</body>
+
+</html>
